@@ -1,18 +1,21 @@
-import React  from 'react';
+import React from "react";
 
-export default function Aleatorio(props){
-    const random = Math.floor(Math.random() * (props.max - props.min + 1)) + props.min;
-    return(
-        <div>
-            <h2> 
-                sera gerado um numero aleatorio entre 
-                <strong> {props.min} </strong> e 
-                <strong> {props.max}</strong>
-            </h2>
-            <p>
-                Numero aleatorio: <strong> {random} </strong>
-            </p>
-
-        </div>
-    )
+export default function Aleatorio(props) {
+  const min = props.min;
+  const max = props.max;
+  const random = Math.floor(Math.random() * (max - min + 1)) + min;
+  return (
+    <div>
+      <h2>Valor Aleatório</h2>
+      <p>
+        <strong> valor minimo: </strong> {min}
+      </p>
+      <p>
+        <strong> Valor maximo: </strong> {max}
+        <p>
+          <strong> Numero aleatorio: </strong> {random}
+        </p>
+      </p>
+    </div>
+  );
 }
